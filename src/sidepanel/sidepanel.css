@@ -1,0 +1,70 @@
+body {
+  width: auto;
+  min-height: 100vh;
+}
+
+.sidepanel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.sidepanel__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.sidepanel__header h1 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.sidepanel__status {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: lowercase;
+  color: var(--text-muted);
+}
+
+.redaction-map__viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.redaction-map__empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 12px;
+  margin: 0;
+}
+
+.redaction-map__box {
+  position: absolute;
+  background: rgba(245, 158, 11, 0.25);
+  border: 1px solid var(--warn);
+  border-radius: 2px;
+}
+
+.redaction-map__caption {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 8px 0 0;
+}
+
+.console--tall {
+  height: 320px;
+}
