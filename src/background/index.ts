@@ -100,6 +100,9 @@ onMessage((message, _sender) => {
   }
 });
 
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   log("idle", "Agent installed. Open the popup and give it a task to try.");
+  if (details.reason === "install") {
+    void chrome.tabs.create({ url: chrome.runtime.getURL("src/onboarding/onboarding.html") });
+  }
 });
