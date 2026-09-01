@@ -87,6 +87,9 @@ export default function Popup() {
         <button type="button" className="btn btn--ghost" onClick={openSidePanel}>
           Open side panel
         </button>
+        <button type="button" className="btn btn--ghost" onClick={() => chrome.runtime.openOptionsPage()}>
+          Settings
+        </button>
       </footer>
     </div>
   );

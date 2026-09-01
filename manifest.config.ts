@@ -20,6 +20,10 @@ export default defineManifest({
       128: "icons/icon128.png",
     },
   },
+  options_ui: {
+    page: "src/options/options.html",
+    open_in_tab: true,
+  },
   background: {
     service_worker: "src/background/index.ts",
     type: "module",

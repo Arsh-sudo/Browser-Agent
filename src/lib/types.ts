@@ -58,6 +58,7 @@ export type ExtensionMessage =
   | { type: "START_TASK"; task: string }
   | { type: "STOP_TASK" }
   | { type: "GET_STATE" }
+  | { type: "CLEAR_LOG" }
   | { type: "STATE_UPDATE"; status: AgentStatus; log: LogEntry[]; regions: RedactedRegion[] }
   | { type: "CAPTURE_CONTEXT_REQUEST" }
   | { type: "CAPTURE_CONTEXT_RESPONSE"; context: SanitizedContext }

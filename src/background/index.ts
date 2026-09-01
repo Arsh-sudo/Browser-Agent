@@ -95,6 +95,11 @@ onMessage((message, _sender) => {
     case "GET_STATE":
       broadcastState();
       break;
+    case "CLEAR_LOG":
+      state.log = [];
+      state.regions = [];
+      broadcastState();
+      break;
     default:
       break;
   }
